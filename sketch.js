@@ -68,29 +68,29 @@ function desenhar_processos(){
 	do {
 		swapped = false;
 		for (let j = 0; j < len; j++) {
-            if (processos[j] > processos[j + 1]) {
-                let tmp = processos[j];
-                processos[j] = processos[j + 1];
-				processos[j + 1] = tmp;
-				
-				// trocando R
-				temp = cores[j*3];
-				cores[j*3] = cores[j*3 + 3]; 
-				cores[j*3 + 3] = temp;
+		    if (processos[j] > processos[j + 1]) {
+			let tmp = processos[j];
+			processos[j] = processos[j + 1];
+			processos[j + 1] = tmp;
 
-				// trocando G
-				temp = cores[j*3 + 1];
-				cores[j*3 + 1] = cores[j*3 + 4];
-				cores[j*3 + 4] = temp;
+			// trocando R
+			temp = cores[j*3];
+			cores[j*3] = cores[j*3 + 3]; 
+			cores[j*3 + 3] = temp;
 
-				// trocando B
-				temp = cores[j*3 + 2];
-				cores[j*3 + 2] = cores[j*3 + 5];
-				cores[j*3 + 5] = temp;
+			// trocando G
+			temp = cores[j*3 + 1];
+			cores[j*3 + 1] = cores[j*3 + 4];
+			cores[j*3 + 4] = temp;
 
-				swapped = true;
-			}
-        }
+			// trocando B
+			temp = cores[j*3 + 2];
+			cores[j*3 + 2] = cores[j*3 + 5];
+			cores[j*3 + 5] = temp;
+
+			swapped = true;
+		    }
+        	}
 	}while(swapped);
 
 	// Indice do processo
